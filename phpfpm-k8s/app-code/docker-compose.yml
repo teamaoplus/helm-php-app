@@ -6,7 +6,7 @@ networks:
 
 services:
   phpfpm:
-    image: USERNAME/phpfpm-app:0.1.0
+    image: omps/phpfpm-app:0.1.0
     networks:
       - app-tier
   nginx:
@@ -16,8 +16,8 @@ services:
     networks:
       - app-tier
     ports:
-      - '80:8080'
-      - '443:8443'
+      - '89:8080'
+      - '9443:8443'
     volumes:
       - ./server_blocks:/opt/bitnami/nginx/conf/server_blocks
   mariadb:
